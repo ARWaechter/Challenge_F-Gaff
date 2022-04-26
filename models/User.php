@@ -18,7 +18,7 @@
         // public $observations;
         // public $password;
                 
-        // CREATE TABLE contacts (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100), phone VARCHAR(30), email VARCHAR(150), observations TEXT, password VARCHAR(200), FOREIGN KEY (users_id) REFERENCES users(id));
+        // CREATE TABLE contacts (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100), phone VARCHAR(30), email VARCHAR(150), observations TEXT, password VARCHAR(200), users_id INT(11) UNSIGNED, FOREIGN KEY (users_id) REFERENCES users(id));
         
         public function generateToken()
         {
@@ -45,10 +45,11 @@
         public function verifyToken($protected = false);
         public function setTokenToSession($token, $redirect = true);
         public function authenticateUser($email, $password);
-        public function findByName($name);
         public function findById($id);
+        public function findByName($name);
+        public function findByEmail($email);
         public function findByToken($token);
-        public function destryToken();
+        public function destroyToken();
         public function changePassword(User $user);
 
     }
