@@ -5,6 +5,9 @@
     require_once("models/Message.php");
     require_once("dao/UserDAO.php");
 
+    $userDao = new UserDAO($conn, $BASE_URL);
+    $userData = $userDao->verifyToken(false);
+
     $message = new Message($BASE_URL);
 
     $flashMessage = $message->getMessage();
@@ -16,15 +19,6 @@
         $message->clearMessage();
 
     }
-
-    $userDao = new UserDAO($conn, $BASE_URL);
-    // $userData = "";
-    $userData = $userDao->verifyToken(false);
-
-
-    
-
-    // print_r($userData);
 
 ?>
 
@@ -61,7 +55,7 @@
                 <ul class="navbar-nav">
                     <?php if($userData): ?>
                     <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>" class="nav-link">
+                        <a href="<?= $BASE_URL ?>newcontact.php" class="nav-link">
                             <i class="far fa-plus-square"></i>Add contact
                         </a>
                     </li>

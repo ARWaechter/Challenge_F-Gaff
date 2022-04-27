@@ -39,7 +39,7 @@
                         <input type="password" name="password" id="password" class="form-control" placeholder="Insert your password">
                     </div>
                     <div class="form-group">
-                        <label for="confirmpassword">Password</label>
+                        <label for="confirmpassword">Confirm password</label>
                         <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Confirm your password">
                     </div>
                     <input type="submit" value="Sign up" class="btn card-btn">

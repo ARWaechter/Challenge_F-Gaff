@@ -11,15 +11,6 @@
 
         // CREATE TABLE users (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100), email VARCHAR(150), password VARCHAR(200), token VARCHAR(200));
 
-        // public $id;
-        // public $user_name;
-        // public $email;
-        // public $phone;
-        // public $observations;
-        // public $password;
-                
-        // CREATE TABLE contacts (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100), phone VARCHAR(30), email VARCHAR(150), observations TEXT, password VARCHAR(200), users_id INT(11) UNSIGNED, FOREIGN KEY (users_id) REFERENCES users(id));
-        
         public function generateToken()
         {
 
