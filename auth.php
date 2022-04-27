@@ -31,8 +31,8 @@
                         <input type="email" name="email" id="email" class="form-control" placeholder="Insert your e-mail">
                     </div>
                     <div class="form-group">
-                        <label for="name">User name</label>
-                        <input type="name" name="name" id="name" class="form-control" placeholder="Insert your user name">
+                        <label for="user_name">User name</label>
+                        <input type="user_name" name="user_name" id="user_name" class="form-control" placeholder="Insert your user user_name">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>

@@ -25,7 +25,7 @@
             $user = new User();
 
             $user->id = $data["id"];
-            $user->name = $data["name"];
+            $user->user_name = $data["user_name"];
             $user->email = $data["email"];
             $user->password = $data["password"];
             $user->token = $data["token"];
@@ -39,7 +39,7 @@
 
             $stmt = $this->conn->prepare("INSERT INTO users (user_name, email, password, token) VALUES (:user_name, :email, :password, :token)");
 
-            $stmt->bindParam(":user_name", $user->name);
+            $stmt->bindParam(":user_name", $user->user_name);
             $stmt->bindParam(":email", $user->email);
             $stmt->bindParam(":password", $user->password);
             $stmt->bindParam(":token", $user->token);
@@ -58,6 +58,24 @@
 
         public function update(User $user, $redirect = true)
         {
+
+            $stmt = $this->conn->prepare("UPDATE users SET user_name = :user_name, email = :email, password = :password, token = :token WHERE id = :id");
+
+            $stmt->bindParam(":user_name", $user->user_name);
+            $stmt->bindParam(":email", $user->email);
+            $stmt->bindParam(":password", $user->password);
+            $stmt->bindParam(":token", $user->token);
+            $stmt->bindParam(":id", $user->id);
+
+            $stmt->execute();
+
+            if($redirect)
+            {
+
+                    // REDIRECT TO HOME
+                $this->message->setMessage("Update successfull", "success");
+
+            }
 
         }
 
@@ -116,6 +134,42 @@
         public function authenticateUser($email, $password)
         {
 
+            $user = $this->findByEmail($email);
+
+            if($user)
+            {
+
+                    // CHECK PASSWORD
+                if(password_verify($password, $user->password))
+                {
+
+                        // GENERATE TOKEN AND INSERT ON SESSION
+                    $token = $user->generateToken();
+
+                        // UPDATE SESSION TOKEN
+                    $this->setTokenToSession($token);
+
+                        // UPDATE USER TOKEN
+                    $user->token = $token;
+
+                    $this->update($user, false);
+
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
         }
 
         public function findById($id)
@@ -130,6 +184,39 @@
 
         public function findByEmail($email)
         {
+
+            if($email != "")
+            {
+
+                $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = :email");
+                $stmt->bindParam(":email", $email);
+                $stmt->execute();
+
+                    // SUCCESS TEST
+                if($stmt->rowCount() > 0)
+                {
+
+                    $data = $stmt->fetch();
+                    $user = $this->buildUser($data);
+
+                    return $user;
+
+                }
+                else
+                {
+
+                    return false;
+
+                }
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
 
         }
         
@@ -172,6 +259,12 @@
 
         public function destroyToken()
         {
+
+                // REMOVE SESSION TOKEN
+            $_SESSION["token"] = "";
+
+                // LOGOUT MESSAGE
+            $this->message->setMessage("Logout soccessfuly", "success");
 
         }
 

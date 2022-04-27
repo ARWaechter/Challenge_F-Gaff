@@ -16,14 +16,14 @@
     if($type === "register")
     {
 
-            // fILTER POST INPUT
-        $name = filter_input(INPUT_POST, "name");
+            // FILTER POST INPUT
+        $user_name = filter_input(INPUT_POST, "user_name");
         $email = filter_input(INPUT_POST, "email");
         $password = filter_input(INPUT_POST, "password");
         $confirmpassword = filter_input(INPUT_POST, "confirmpassword");
 
             // MIN DATA VERIFICATION
-        if($name && $email && $password)
+        if($user_name && $email && $password)
         {
 
                 // PASSWORD VERIFICATION
@@ -40,7 +40,7 @@
                     $userToken = $user->generateToken();
                     $finalPassword = $user->generatePassword($password);
 
-                    $user->name = $name;
+                    $user->user_name = $user_name;
                     $user->email = $email;
                     $user->password = $finalPassword;
                     $user->token = $userToken;
@@ -79,6 +79,25 @@
     }
     else if($type === "login")
     {
+
+            // FILTER POST INPUT
+        $email = filter_input(INPUT_POST, "email");
+        $password = filter_input(INPUT_POST, "password");
+        $user_name = filter_input(INPUT_POST, "user_name");
+
+            // AUTHENTICATE USER
+        if($userDao->authenticateUser($email, $password))
+        {
+
+            $message->setMessage("Welcome", "success");
+
+        }
+        else    // REDIRECT WHEN ATHENTENTICATION FAILS
+        {
+
+            $message->setMessage("User or password incorrect", "error");
+
+        }
 
     }
 
