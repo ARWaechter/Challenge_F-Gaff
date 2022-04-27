@@ -21,6 +21,11 @@
     // $userData = "";
     $userData = $userDao->verifyToken(false);
 
+
+    
+
+    // print_r($userData);
+
 ?>
 
 <!DOCTYPE html>
@@ -61,10 +66,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>" class="nav-link">User Profile</a>
+                        <a href="<?= $BASE_URL ?>logout.php" class="nav-link">Sign out</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>" class="nav-link">Sign out</a>
+                        <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link"><i class="fa-solid fa-gear"></i></a>
                     </li>
                     <?php else: ?>
                     <li class="nav-item">
