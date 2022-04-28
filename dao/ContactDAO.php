@@ -55,7 +55,7 @@ class ContactDAO implements ContactDAOInterface
     public function update(Contact $contact)
     {
 
-        $stmt = $this->conn->prepare("UPDATE contacts SET name = :name, email = :email, phone = :phone, observations = :observations, users_id = :users_id) WHERE id = :id");
+        $stmt = $this->conn->prepare("UPDATE contacts SET name = :name, email = :email, phone = :phone, observations = :observations, users_id = :users_id WHERE id = :id");
 
         $stmt->bindParam(":id", $contact->id);
         $stmt->bindParam(":name", $contact->name);

@@ -106,9 +106,12 @@
                 $contactData->email = $email;
                 $contactData->phone = $phone;
                 $contactData->observations = $observations;
-                $contactData->users_id = $userData->$users_id;
+                $contactData->users_id = $userData->id;
 
-                $contactDao->create($contactData);
+                // print_r($userData);
+                // print_r($contactData); exit;
+
+                $contactDao->update($contactData);
 
             }
             else

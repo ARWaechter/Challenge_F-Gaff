@@ -7,20 +7,27 @@
 <div id="main-container" class="container-fluid">
     <div class="col-md-12">
         <div class="row" id="auth-row">
-            <div class="col-md-4 offset-md-4" id="login-container">
-                <h2>Login</h2>
+            <div class="col-md-4 offset-md-4" id="register-container">
+                <h2>Create account</h2>
                 <form action="<?= $BASE_URL ?>auth_process.php" method="post">
-                    <input type="hidden" name="type" value="login">
+                    <input type="hidden" name="type" value="register">
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="Insert your e-mail">
                     </div>
                     <div class="form-group">
+                        <label for="user_name">User name</label>
+                        <input type="user_name" name="user_name" id="user_name" class="form-control" placeholder="Insert your user user_name">
+                    </div>
+                    <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" class="form-control" placeholder="Insert your password">
                     </div>
-                    <input type="submit" value="Login" class="btn card-btn">
-                    <p class="register-now">Click <a href="<?= $BASE_URL ?>register.php" class="redirect-link">here</a> to create account.</p>
+                    <div class="form-group">
+                        <label for="confirmpassword">Confirm password</label>
+                        <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Confirm your password">
+                    </div>
+                    <input type="submit" value="Sign up" class="btn card-btn">
                 </form>
             </div>
         </div>

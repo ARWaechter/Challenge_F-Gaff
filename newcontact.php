@@ -22,12 +22,12 @@
                         <input type="text" name="name" id="name" class="form-control" placeholder="Contact name">
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Contact e-mail">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" class="form-control" placeholder="Contact phone">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Contact phone">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Contact e-mail">
                     </div>
                     <div class="form-group">
                         <label for="observations">observations:</label>
