@@ -18,9 +18,13 @@
     {
 
         public function buildContact($data);
+        public function create(Contact $contact);
+        public function update(Contact $contact);
+        public function delete($id);
         public function findAll();
-        public function getContactByUserId($id);
+        public function findByUserId($id);
         public function findById($id);
+        public function searchContact($search);
         public function findByName($name);
         public function findByEmail($email);
         public function findByPhone($phone);
