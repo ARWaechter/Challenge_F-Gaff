@@ -13,26 +13,6 @@ body
 
 }
 
-#search-form
-{
-
-    margin: 0 auto;
-    width: 30%;
-    margin-left: 250px;
-    background-color: #fff;
-    border-radius: 5px;
-
-}
-
-#search-form  .form-control
-{
-
-    border: none;
-    width: 85%;
-    box-shadow: none;
-
-}
-
 #title
 {
 
@@ -54,25 +34,6 @@ body
     padding: 15px;
 
 }
-.card-btn
-{
-
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #000000;
-    width: 100%;
-    margin: 0 auto;
-
-}
-
-.card-btn:hover
-{
-
-    background-color: rgb(118, 115, 115);
-    color: #000000;
-    border-color: #000000;
-
-}
 
 .msg-container
 {
@@ -82,6 +43,9 @@ body
     
 }
 
+
+
+    /* MSG */
 .msg
 {
 
@@ -111,11 +75,25 @@ body
 
 }
 
+
+
+    /* BUTTONS */
+.card-btn
+{
+
+}
+
+.card-btn:hover
+{
+
+}
+
 .btn
 {
 
     margin: 0 auto;
     color: grey;
+    text-align: center;
 
 }
 
@@ -127,15 +105,24 @@ body
 }
 
 
-
-    /* HOME */
-.section-title
+    /* SEARCH */
+#search-form
 {
-    
-    margin: 30px auto;
-    border-bottom: 3px solid rgb(255, 0, 0);
-    max-width: 300px;
-    text-align: center;
+
+    margin: 0 auto;
+    width: 30%;
+    margin-left: 250px;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+
+#search-form  .form-control
+{
+
+    border: none;
+    width: 85%;
+    box-shadow: none;
 
 }
 
@@ -148,6 +135,35 @@ body
     background-color: transparent;
     border: 3px solid;
     padding: 10px;
+
+}
+
+
+
+    /* HOME */
+.main-container form
+{
+
+    margin: 0 auto;
+    width: 100%;
+    
+}
+
+.page-description
+{
+
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.section-title
+{
+    
+    margin: 30px auto;
+    border-bottom: 3px solid rgb(255, 0, 0);
+    max-width: 300px;
+    text-align: center;
 
 }
 
@@ -176,6 +192,9 @@ body
 
 }
 
+
+
+    /* EDIT CONTACT */
 .actions-column
 {
 
