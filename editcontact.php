@@ -60,7 +60,7 @@
                         <input type="email" name="email" id="email" placeholder="Insert contact e-mail" value="<?= $contact->email ?>">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone:</label>
+                        <label for="phone">Oservations:</label>
                         <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Insert contact observations"><?= $contact->observations ?></textarea>
                     </div>
                     <input type="submit" value="Update contact" class="btn card-btn">
