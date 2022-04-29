@@ -41,8 +41,7 @@
 
     <?php if($userData): ?>
         <div class="main-container container-fluid">
-            <div class="col-md-12">
-                <div class="col-md-6 offset-md-1">
+            <div class="col-md-12 edit-contact-container">
                 <h1 class="section-title"><?= $contact->name ?></h1>
                 <p class="page-description"> Edit contact</p>
                 <form action="<?= $BASE_URL ?>contact_process.php" method="post">
@@ -66,7 +65,6 @@
                     </div>
                     <input type="submit" value="Update contact" class="btn card-btn">
                 </form>
-                </div>
             </div>
         </div>
     <?php endif; ?>

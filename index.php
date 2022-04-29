@@ -39,17 +39,17 @@
         <div class="main-container container-fluid">
             <h1 class="col-md-3 offset-md-4 section-title">My contacts</h1>
             <p class="col-md-3 offset-md-4 section-description"></p>
-            <div class="col-md-3 offset-md-9" id="add-contact-container">
+                <?php if($search): ?>
+                    <div>
+                        <p class="search-result">You are searching for: <?= $search?></p>
+                    </div>
+                <?php endif; ?>
+            <div id="add-contact-container">
                 <a href="<?= $BASE_URL ?>newcontact.php" class="btn card-btn">
                     <i class="fas fa-plus">Add contact</i>
                 </a>
             </div>
             <div class="col-md-12" id="contact-dash-container">
-                <?php if($search): ?>
-                    <div class="col-md-3 offset-md-3">
-                        <p class="search-result">You are searching for: <?= $search?></p>
-                    </div>
-                <?php endif; ?>
                 <table class="table">
                     <thead>
                         <th scope="col">Name</th>
@@ -64,11 +64,11 @@
                                 <td><?= $contact->phone ?></td>
                                 <td><?= $contact->email ?></td>
                                 <td class="actions-column">
-                                    <a href="<?= $BASE_URL ?>editcontact.php?id=<?= $contact->id ?>" class="edit-btn"><i class="far fa-edit"></i>Edit</a>
+                                    <a href="<?= $BASE_URL ?>editcontact.php?id=<?= $contact->id ?>" class="edit-btn"><i class="far fa-edit"></i></a>
                                     <form action="<?= $BASE_URL ?>contact_process.php?id=<?= $contact->id ?>" method="post">
                                         <input type="hidden" name="type" value="delete">
                                         <input type="hidden" name="id" value="<?= $contact->id ?>">
-                                        <button type="submit" class="delete-btn"><i class="fas fa-times"></i>Delete</button>
+                                        <button type="submit" class="delete-btn"><i class="fas fa-times"></i></button>
                                     </form>
                                 </td>
                             </tr>

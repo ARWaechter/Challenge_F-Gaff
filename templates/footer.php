@@ -1,6 +1,6 @@
     <footer id="footer">
         <div>
-            <p class="col-md-3 offset-md-5">&copy; 2022 ARWaechter</p>
+            <p>&copy; 2022 ARWaechter</p>
         </div>
     </footer>
         <!-- BOOSTRAP JS-->
