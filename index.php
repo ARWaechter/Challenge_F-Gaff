@@ -12,21 +12,44 @@
     $userDao = new UserDAO($conn, $BASE_URL);
     
     $userData = $userDao->verifyToken(true);
+
+        // GET SEARCH
+    $search=filter_input(INPUT_GET, "search");
+
+    if($search)
+    {
+
+        $userContacts = $contactDao->searchContact($search);
+
+        // echo $search;
+        // echo "<br>";
+        // print_r($userContacts); exit;
+        
+    }
+    else
+    {
     
-    $userContacts = $contactDao->findByUserId($userData->id);
+        $userContacts = $contactDao->findByUserId($userData->id);
+
+    }
 
 ?>
 
     <?php if($userData): ?>
         <div class="main-container container-fluid">
-            <h1 class="section-title">My contacts</h1>
-            <p class="section-description">Description</p>
-            <div class="col-md-12" id="add-contact-container">
+            <h1 class="col-md-3 offset-md-4 section-title">My contacts</h1>
+            <p class="col-md-3 offset-md-4 section-description"></p>
+            <div class="col-md-3 offset-md-9" id="add-contact-container">
                 <a href="<?= $BASE_URL ?>newcontact.php" class="btn card-btn">
-                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-plus">Add contact</i>
                 </a>
             </div>
             <div class="col-md-12" id="contact-dash-container">
+                <?php if($search): ?>
+                    <div class="col-md-3 offset-md-3">
+                        <p class="search-result">You are searching for: <?= $search?></p>
+                    </div>
+                <?php endif; ?>
                 <table class="table">
                     <thead>
                         <th scope="col">Name</th>

@@ -201,7 +201,7 @@ class ContactDAO implements ContactDAOInterface
 
         $contacts = [];
 
-        $stmt = $this->conn->prepare("SELECT * FROM contacts WHERE name LIKE :name OR email LIKE :name ORDER BY name ASC");
+        $stmt = $this->conn->prepare("SELECT * FROM contacts WHERE name LIKE :name");
 
         $stmt->bindValue(":name", '%'.$search.'%'); // SERACH EVEN FOR PART OF NAME
 
