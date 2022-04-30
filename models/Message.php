@@ -18,6 +18,14 @@
             $_SESSION["msg"] = $msg;
             $_SESSION["type"] = $type;
 
+            //echo "referer  --->  "; 
+            //print_r($_SERVER["HTTP_REFERER"]); 
+            //echo "<hr>"; 
+            //echo "uri  --->  "; 
+            //print_r($_SERVER["REQUEST_URI"]); 
+            //echo "<hr>"; 
+            //print_r($_SERVER); exit;
+
             if($redirect != "back")
             {
 

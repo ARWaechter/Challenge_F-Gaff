@@ -6,7 +6,7 @@
     require_once("dao/UserDAO.php");
 
     $userDao = new UserDAO($conn, $BASE_URL);
-    $userData = $userDao->verifyToken(false);
+    $userData = $userDao->verifyToken();
 
     $message = new Message($BASE_URL);
 
@@ -43,11 +43,11 @@
 <body>
     <header>
         <nav id="main-navbar" class="navbar navbar-expand-lg">
-            <a href="<?= $BASE_URL ?>" class="navbar-brand"><span id="title">My contacts</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="toggle navigation"> <i id="search-icon" class="fas fa-bars"></i></button>
+            <a href="<?= $BASE_URL ?>" class="navbar-brand"><span class="title">My contacts</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="toggle navigation"> <iclass="fas fa-bars"></i></button>
             <form action="<?= $BASE_URL ?>" method="get" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="search" id="search" class="form-control form-inline mr-sm-2" type="search" placeholder="Search contact" aria-label="search">
-                <button type="submit" class="btn my-2 my-sm-0">
+                <button type="submit" class="search-icon my-2 my-sm-0">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
@@ -76,6 +76,6 @@
     </header>
     <?php if(!empty($flashMessage["msg"])): ?>
         <div class="msg-container">
-            <p class="msg <?= $flashMessage["msg"] ?>"><?= $flashMessage["msg"] ?></p>
+            <p class="msg <?= $flashMessage["type"] ?>"><?= $flashMessage["msg"] ?></p>
         </div>
     <?php endif; ?>

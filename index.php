@@ -37,15 +37,15 @@
 
     <?php if($userData): ?>
         <div class="main-container container-fluid">
-            <h1 class="col-md-3 offset-md-4 section-title">My contacts</h1>
-            <p class="col-md-3 offset-md-4 section-description"></p>
+            <h1 class="section-title">My contacts</h1>
+            <p class="section-description"></p>
                 <?php if($search): ?>
                     <div>
                         <p class="search-result">You are searching for: <?= $search?></p>
                     </div>
                 <?php endif; ?>
             <div id="add-contact-container">
-                <a href="<?= $BASE_URL ?>newcontact.php" class="btn card-btn">
+                <a href="<?= $BASE_URL ?>newcontact.php" class="btn">
                     <i class="fas fa-plus">Add contact</i>
                 </a>
             </div>
@@ -78,8 +78,8 @@
             </div>
         </div>
     <?php else: ?>
-        <div class="main-container container-fluid">
-            <h1 class="section-title">Login to create and view your contacts</h1>
+        <div class="container-fluid">
+            <h1 class="login-title">Login to create and view your contacts</h1>
         </div>
     <?php endif; ?>
 <?php

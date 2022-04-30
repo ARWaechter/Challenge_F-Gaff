@@ -41,7 +41,7 @@
 
     <?php if($userData): ?>
         <div class="main-container container-fluid">
-            <div class="col-md-12 edit-contact-container">
+            <div id="edit-contact-container">
                 <h1 class="section-title"><?= $contact->name ?></h1>
                 <p class="page-description"> Edit contact</p>
                 <form action="<?= $BASE_URL ?>contact_process.php" method="post">
@@ -63,7 +63,7 @@
                         <label for="phone">Oservations:</label>
                         <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Insert contact observations"><?= $contact->observations ?></textarea>
                     </div>
-                    <input type="submit" value="Update contact" class="btn card-btn">
+                    <input type="submit" value="Update contact" class="btn">
                 </form>
             </div>
         </div>

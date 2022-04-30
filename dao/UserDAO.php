@@ -100,7 +100,7 @@
                 {
 
                         // REDIRECT USER NOT AUTHENTICATED
-                    $this->message->setMessage("login to see this page", "erro", "auth.php");
+                    $this->message->setMessage("login to see this page", "error", "auth.php");
                     
                 }
 
@@ -109,7 +109,7 @@
             {
 
                     // REDIRECT USER NOT AUTHENTICATED
-                $this->message->setMessage("login to see this page", "erro", "auth.php");
+                $this->message->setMessage("login to see this page", "error", "auth.php");
 
             }
 
