@@ -9,7 +9,6 @@ body
     #main-navbar
 {
 
-    position: fixed;
     width: 100%;
     top: 0;
     background-color: black;
@@ -48,13 +47,14 @@ body
 
 
 
+
     /* MSG */
 .msg
 {
 
     border-radius: 10px;
     width: 40%;
-    margin: 15px auto;
+    margin: 10px auto 0;
     border: solid #000;
     text-align: center;
     padding: 5px;
@@ -93,6 +93,17 @@ body
 
 }
 
+#contact-form
+{
+
+    width: auto;
+
+}
+
+#contact-form .btn{
+    margin: 0 auto;
+}
+
 .btn
 {
 
@@ -103,6 +114,7 @@ body
     text-align: center;
     font-family: Arial;
     margin: 0 auto;
+    width: auto;
 
 }
 
@@ -173,7 +185,18 @@ body
 
 
     /* BODY */
-.main-container form
+    #main-container
+{
+    
+    position: relative;
+    margin-top: 0px;
+    color: black;
+    min-height: 65vh;
+    padding: 0px;
+    
+}
+
+#main-container, .form-control
 {
 
     margin: 0 auto;
@@ -237,7 +260,21 @@ body
 #edit-contact-container form
 {
 
-    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+#edit-contact-container .form-group
+{
+
+    margin: 10px auto;
+
+}
+
+#edit-contact-container .update-btn
+{
+
+    margin: 20px auto;
 
 }
 
@@ -322,17 +359,17 @@ body
 /* FOOTER */
 #footer
 {
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
     background-color: #000;
+    margin-bottom: 0px;
 }
 
 #footer p
 {
 
     text-align: center;
-    margin: auto;
+    margin-top: 10px;
     padding: 25px;
     color: #fff;
 

@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav id="main-navbar" class="navbar navbar-expand-lg">
             <a href="<?= $BASE_URL ?>" class="navbar-brand"><span class="title">My contacts</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="toggle navigation"> <iclass="fas fa-bars"></i></button>

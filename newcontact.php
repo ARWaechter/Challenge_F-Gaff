@@ -13,9 +13,9 @@
     
 ?>
 
-        <div class="main-container container-fluid">
+        <div id="main-container" class="container-fluid">
             <h1 class="section-title">Add contact</h1>
-                <form action="<?= $BASE_URL ?>contact_process.php" method="post">
+                <form action="<?= $BASE_URL ?>contact_process.php" id="contact-form" method="post">
                     <input type="hidden" name="type" value="create">
                     <div class="form-group">
                         <label for="name">Name:</label>

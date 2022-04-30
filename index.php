@@ -36,7 +36,7 @@
 ?>
 
     <?php if($userData): ?>
-        <div class="main-container container-fluid">
+        <div id="main-container" class="container-fluid">
             <h1 class="section-title">My contacts</h1>
             <p class="section-description"></p>
                 <?php if($search): ?>
@@ -44,11 +44,11 @@
                         <p class="search-result">You are searching for: <?= $search?></p>
                     </div>
                 <?php endif; ?>
-            <div id="add-contact-container">
+            <!--<div id="add-contact-container">
                 <a href="<?= $BASE_URL ?>newcontact.php" class="btn">
                     <i class="fas fa-plus">Add contact</i>
                 </a>
-            </div>
+            </div>-->
             <div class="col-md-12" id="contact-dash-container">
                 <table class="table">
                     <thead>

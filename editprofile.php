@@ -15,7 +15,7 @@
 
 ?>
 
-        <div class="main-container container-fluid">
+        <div id="main-container" class="container-fluid">
             <div class="col-md-12">
                 <div class="col-md-6 offset-md-3">
                     <form action="<?= $BASE_URL ?>user_process.php" method="post">

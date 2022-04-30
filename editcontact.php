@@ -40,28 +40,26 @@
 ?>
 
     <?php if($userData): ?>
-        <div class="main-container container-fluid">
-            <div id="edit-contact-container">
-                <h1 class="section-title"><?= $contact->name ?></h1>
-                <p class="page-description"> Edit contact</p>
-                <form action="<?= $BASE_URL ?>contact_process.php" method="post">
+        <div id="main-container" class="container-fluid">
+            <h1 class="section-title">Edit contact</h1>
+                <form action="<?= $BASE_URL ?>contact_process.php" id="contact-form" method="post">
                     <input type="hidden" name="type" value="update">
                     <input type="hidden" name="id" value="<?= $contact->id ?>">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" value="<?= $contact->name ?>">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Contact name" value="<?= $contact->name ?>">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Insert contact phone" value="<?= $contact->phone ?>">
+                        <input type="tel" name="phone" id="phone" class="form-control" placeholder="Contact phone" value="<?= $contact->phone ?>">
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" name="email" id="email" placeholder="Insert contact e-mail" value="<?= $contact->email ?>">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Contact e-mail" value="<?= $contact->email ?>">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Oservations:</label>
-                        <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Insert contact observations"><?= $contact->observations ?></textarea>
+                        <label for="observations">observations:</label>
+                        <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Observations here..."><?= $contact->observations ?></textarea>
                     </div>
                     <input type="submit" value="Update contact" class="btn">
                 </form>
