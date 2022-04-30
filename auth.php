@@ -7,8 +7,8 @@
 <div id="main-container" class="container-fluid">
     <div class="col-md-12">
         <div class="row" id="auth-row">
-            <div class="col-md-4 offset-md-4" id="login-container">
-                <h2>Login</h2>
+            <div class="col-md-12" id="login-container">
+                <h2 class="section-title">Login</h2>
                 <form action="<?= $BASE_URL ?>auth_process.php" method="post">
                     <input type="hidden" name="type" value="login">
                     <div class="form-group">
@@ -20,7 +20,7 @@
                         <input type="password" name="password" id="password" class="form-control" placeholder="Insert your password">
                     </div>
                     <input type="submit" value="Login" class="btn card-btn">
-                    <p class="register-now">Click <a href="<?= $BASE_URL ?>register.php" class="redirect-link">here</a> to create account.</p>
+                    <p class="link">Click <a href="<?= $BASE_URL ?>register.php" class="redirect-link">here</a> to create account.</p>
                 </form>
             </div>
         </div>

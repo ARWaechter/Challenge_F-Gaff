@@ -43,7 +43,7 @@
 <body>
     <header id="header">
         <nav id="main-navbar" class="navbar navbar-expand-lg">
-            <a href="<?= $BASE_URL ?>" class="navbar-brand"><span class="title">My contacts</span></a>
+            <a href="<?= $BASE_URL ?>" class="navbar-brand"><span class="title"><i class="fa-solid fa-address-book"></i>     My contacts</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="toggle navigation"> <iclass="fas fa-bars"></i></button>
             <form action="<?= $BASE_URL ?>" method="get" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="search" id="search" class="form-control form-inline mr-sm-2" type="search" placeholder="Search contact" aria-label="search">

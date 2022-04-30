@@ -11,7 +11,7 @@ body
 
     width: 100%;
     top: 0;
-    background-color: black;
+    background-color: blue;
     padding: 15px;
 
 }
@@ -30,11 +30,15 @@ body
     position: absolute;
     font-size: 30px;
     font-weight: bold;
-    left: 55px;
+    left: 10px;
     padding: 0;
     margin: 0;
     top: -20px;
 
+}
+.title.fa-solid.fa-address-book
+{
+    margin-right: 10px;
 }
 
 .msg-container
@@ -43,6 +47,20 @@ body
     background-color: transparent;
     padding: 10px;
     
+}
+
+.nav-link
+{
+
+    color: white;
+
+}
+
+.nav-link:hover
+{
+
+    color: black;
+
 }
 
 
@@ -82,26 +100,22 @@ body
 
 
     /* BUTTONS */
+#contact-form, .user-form
+{
+
+    margin: 0 auto;
+
+}
+
 .card-btn
 {
 
-    color: #000;
-    background-color: #f5c518;
-    border: 2px solid #f5c518;
-    width: 20%;
-    margin: 20 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
+    width: 150px;
+    margin: 10px auto;
 
-}
-
-#contact-form
-{
-
-    width: auto;
-
-}
-
-#contact-form .btn{
-    margin: 0 auto;
 }
 
 .btn
@@ -113,7 +127,6 @@ body
     background-color: grey;
     text-align: center;
     font-family: Arial;
-    margin: 0 auto;
     width: auto;
 
 }
@@ -121,7 +134,8 @@ body
 .btn:hover
 {
 
-    color: yellow;
+    color: blue;
+    background-color: transparent;
 
 }
 
@@ -163,12 +177,19 @@ body
 .search-result
 {
 
+    font-size: 20px;
     max-width: 60%;
-    text-align: center;
+    text-align: left;
     margin: 15px auto;
-    background-color: transparent;
-    border: 3px solid;
+    background-color: rgba(128, 128, 128, 0.421);
     padding: 10px;
+
+}
+
+.search-copy
+{
+
+    color: blue;
 
 }
 
@@ -185,7 +206,7 @@ body
 
 
     /* BODY */
-    #main-container
+#main-container
 {
     
     position: relative;
@@ -196,47 +217,58 @@ body
     
 }
 
-#main-container, .form-control
+#main-container
 {
 
     margin: 0 auto;
     width: 100%;
+    min-height: 65vh;
+    padding: 40px;
     
 }
-/*
-.page-description
-{
-
-    margin: 0 auto;
-    width: 100%;
-
-}*/
 
 .section-title
 {
-    
-    margin: 100px auto 0;
-    border-bottom: 3px solid rgb(255, 0, 0);
-    max-width: 300px;
+    width: 350px;
+    display: block;
+    border-bottom: 3px solid blue;
+    padding: 10px;
+    margin: 0 auto 20px;
     text-align: center;
 
 }
 
-#contact-dash-container
+.page-description
 {
-    
-    margin: 80px auto 0px;
-    border: none;
+    width: 300px;
+    content: "";
+    display: block;
+    padding: 10px;
+    margin: 0 auto 20px;
+    text-align: center;
 
 }
 
-#add-contact-container
+.link
 {
 
-    width: 200px;
-    position: absolute;
-    right: 100px;
+    width: 300px;
+    content: "";
+    display: block;
+    padding-top: 70px;
+    margin:  auto;
+    text-align: center;
 
+}
+
+.page-title
+{
+    content: "";
+    width: 300px;
+    border-bottom: 2px solid #f5c518;
+    display: block;
+    margin: 0 auto;
+    padding-top: 7px;
 }
 
 .form-group
@@ -278,15 +310,6 @@ body
 
 }
 
-#edit-contact-container input
-{
-
-    position: absolute;
-    left: 50%;
-    margin: 0 auto;
-
-}
-
 
 
     /* EDIT CONTACT */
@@ -321,7 +344,7 @@ body
     height: 50px;
     color: blue;
     background-color: transparent;
-    padding: 5px;
+    padding: 3px 5px;
 
 }
 
@@ -336,13 +359,14 @@ body
 .delete-btn
 {
 
+    display: block;
     border: none;
     font-size: 20px;
     width: 25px;
     height: 25px;
     color: red;
     background-color: transparent;
-    padding: 0px;
+    margin-top: 0;
 
 }
 
@@ -359,17 +383,18 @@ body
 /* FOOTER */
 #footer
 {
-    position: relative;
+
     width: 100%;
-    background-color: #000;
+    background-color: blue;
     margin-bottom: 0px;
 }
 
 #footer p
 {
 
+    position: relative;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 100px;
     padding: 25px;
     color: #fff;
 

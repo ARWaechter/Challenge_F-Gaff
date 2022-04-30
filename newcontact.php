@@ -33,7 +33,7 @@
                         <label for="observations">observations:</label>
                         <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Observations here..."></textarea>
                     </div>
-                    <input type="submit" value="Add contact" class="btn">
+                    <input type="submit" value="Add contact" class="card-btn btn">
                 </form> 
         </div>
 

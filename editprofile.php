@@ -17,43 +17,22 @@
 
         <div id="main-container" class="container-fluid">
             <div class="col-md-12">
-                <div class="col-md-6 offset-md-3">
-                    <form action="<?= $BASE_URL ?>user_process.php" method="post">
-                        <input type="hidden" name="type" value="update">
-                        <div>
-                            <div>
-                                <h1 class="section-title"><?= $userData->user_name ?></h1>
-                                <div class="form-group">
-                                    <label for="user_name">User name:</label>
-                                    <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Isert your user user_name" value="<?= $userData->user_name ?>">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-mail:</label>
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="Isert your e-mail" value="<?= $userData->email ?>">
-                                </div>
-                                <input type="submit" value="Update" class="btn card-btn">
-                            </div>
+                <form action="<?= $BASE_URL ?>user_process.php" class="user-form" method="post">
+                    <input type="hidden" name="type" value="update">
+                    <div>
+                        <h1 class="section-title"><?= $userData->user_name ?></h1>
+                        <div class="form-group">
+                            <label for="user_name">User name:</label>
+                            <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Isert your user user_name" value="<?= $userData->user_name ?>">
                         </div>
-                    </form>
-                    <div id="change-password-container">
-                        <div>
-                            <h2>Change password</h2>
-                            <p class="page-description">Type your new password</p>
-                            <form action="<?= $BASE_URL ?>user_process.php" method="post">
-                                <input type="hidden" name="type" value="changepassword">
-                                <div class="form-group">
-                                    <label for="password">Password:</label>
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Insert your new password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="confirmpassword">Confirm password:</label>
-                                    <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Insert your new password again">
-                                </div>
-                                <input type="submit" value="Change password" class="btn card-btn">
-                            </form>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Isert your e-mail" value="<?= $userData->email ?>">
                         </div>
-                    </div>  
-                </div>
+                        <input type="submit" value="Update" class="card-btn btn">
+                    </div>
+                </form>
+                <p class="link">Click <a href="<?= $BASE_URL ?>pass_change.php" class="redirect-link">here</a> to change your password.</p> 
             </div>
         </div>
 

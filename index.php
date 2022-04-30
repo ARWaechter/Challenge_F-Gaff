@@ -41,7 +41,7 @@
             <p class="section-description"></p>
                 <?php if($search): ?>
                     <div>
-                        <p class="search-result">You are searching for: <?= $search?></p>
+                        <p class="search-result">You are searching for: <span class="search-copy"><?= $search?></span></p>
                     </div>
                 <?php endif; ?>
             <!--<div id="add-contact-container">

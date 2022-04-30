@@ -41,7 +41,8 @@
 
     <?php if($userData): ?>
         <div id="main-container" class="container-fluid">
-            <h1 class="section-title">Edit contact</h1>
+            <div class="col-md-8 offset-md-2">
+                <h1 class="section-title">Edit contact</h1>
                 <form action="<?= $BASE_URL ?>contact_process.php" id="contact-form" method="post">
                     <input type="hidden" name="type" value="update">
                     <input type="hidden" name="id" value="<?= $contact->id ?>">
@@ -61,7 +62,7 @@
                         <label for="observations">observations:</label>
                         <textarea name="observations" id="observations" rows="5" class="form-control" placeholder="Observations here..."><?= $contact->observations ?></textarea>
                     </div>
-                    <input type="submit" value="Update contact" class="btn">
+                    <input type="submit" value="Update contact" class="card-btn btn">
                 </form>
             </div>
         </div>
